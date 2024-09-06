@@ -60,7 +60,7 @@ stages = ['''
 ''']
 
 end_of_game = False
-word_list = ["ardvark", "baboon", "camel"]
+word_list = ["antelope", "baboon", "camel"]
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
@@ -68,7 +68,7 @@ word_length = len(chosen_word)
 lives = 6
 
 
-print(f'Pssst, the solution is {chosen_word}.')
+
 
 
 display = []
@@ -81,7 +81,6 @@ while not end_of_game:
     
     for position in range(word_length):
         letter = chosen_word[position]
-        # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
         if letter == guess:
             display[position] = letter
         
@@ -98,8 +97,6 @@ while not end_of_game:
             end_of_game= True
             
         
-
-    #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
 
   
